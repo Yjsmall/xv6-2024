@@ -12,8 +12,7 @@ void start() {
     exit(0);
 }
 
-char *
-strcpy(char *s, const char *t) {
+char *strcpy(char *s, const char *t) {
     char *os;
 
     os = s;
@@ -36,8 +35,7 @@ uint strlen(const char *s) {
     return n;
 }
 
-void *
-memset(void *dst, int c, uint n) {
+void *memset(void *dst, int c, uint n) {
     char *cdst = (char *)dst;
     int   i;
     for (i = 0; i < n; i++) {
@@ -46,16 +44,14 @@ memset(void *dst, int c, uint n) {
     return dst;
 }
 
-char *
-strchr(const char *s, char c) {
+char *strchr(const char *s, char c) {
     for (; *s; s++)
         if (*s == c)
             return (char *)s;
     return 0;
 }
 
-char *
-gets(char *buf, int max) {
+char *gets(char *buf, int max) {
     int  i, cc;
     char c;
 
@@ -92,8 +88,7 @@ int atoi(const char *s) {
     return n;
 }
 
-void *
-memmove(void *vdst, const void *vsrc, int n) {
+void *memmove(void *vdst, const void *vsrc, int n) {
     char       *dst;
     const char *src;
 
@@ -123,7 +118,6 @@ int memcmp(const void *s1, const void *s2, uint n) {
     return 0;
 }
 
-void *
-memcpy(void *dst, const void *src, uint n) {
+void *memcpy(void *dst, const void *src, uint n) {
     return memmove(dst, src, n);
 }
