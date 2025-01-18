@@ -61,7 +61,9 @@ endif
 
 # riscv64-unknown-elf- or riscv64-linux-gnu-
 # perhaps in /opt/riscv/bin
-ifeq ($(shell uname), Linux)
+ifeq ($(shell uname), Darwin)
+TOOLPREFIX = riscv64-unknown-elf-
+else
 TOOLPREFIX = riscv64-linux-gnu-
 endif
 #TOOLPREFIX = 
